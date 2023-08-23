@@ -1,1 +1,37 @@
-@import "./navbar"
+@import "./navbar";
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 1360px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.graph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+
+    &Circle {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &Canvas {
+        margin: 0 auto;
+    }
+
+    &Bar {
+        width: 50%;
+    }
+}

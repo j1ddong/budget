@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   color: inherit; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
@@ -28,4 +33,37 @@ header nav span {
 
 #main-page {
   opacity: 0.6;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1360px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.graph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+.graphCircle {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.graphCanvas {
+  margin: 0 auto;
+}
+.graphBar {
+  width: 50%;
 }/*# sourceMappingURL=main.css.map */

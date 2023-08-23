@@ -9,24 +9,34 @@
 	<link rel="stylesheet" href="./css/main.css">
 	<!-- chart js -->
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	
 </head>
 
 <body>
-	<header>
-		<h1 id="website-name">Budget</h1>
+	<div class="container">
+		<header>
+			<h1 id="website-name">Budget</h1>
 			<nav>
-					<span id="main-page"><a href="index.html">Main Page</a></span>
-					<span id="history"><a href="">History</a></span>
-					<span id="calculator"><a href="calculator.html">Calculator</a></span>
+				<span id="main-page"><a href="index.html">Main Page</a></span>
+				<span id="history"><a href="">History</a></span>
+				<span id="calculator"><a href="calculator.html">Calculator</a></span>
 			</nav>
-	</header>
-	<canvas id="expenses_circle" width="500" height="500"></canvas>
+		</header>
+		<main>
+			<div class="graph wrapper">
+				<div class="graphCircle">
+					<canvas id="expenses_circle" class="graphCanvas"></canvas>
+				</div>
+				<div class="graphBar">
+					<canvas id="expenses_bar"></canvas>
+				</div>
+			</div>
+		</main>
+	</div>
 
 	<script>
 		window.onload = function () {
 			// drawing a doughnut chart graph
-			let circle = document.querySelector("#expenses_circle").getContext('2d')
+			const circle = document.querySelector("#expenses_circle").getContext('2d')
 
 			new Chart(circle, {
 				type: 'doughnut',
@@ -49,6 +59,59 @@
 					responsive: false,
 				}
 			});
+
+			// drawing a bar chart graph
+			const ctx = document.getElementById('expenses_bar');
+
+			const data = {
+				labels: [
+					'Rent',
+					'Utilties',
+					'Transport',
+					'Food',
+					'Entertainment',
+					'Health',
+					'Clothing',
+				],
+				datasets: [
+					{
+						label: 'My Expenses',
+						data: [65, 59, 80, 81, 56, 55, 40],
+						backgroundColor: [
+							'rgba(255, 99, 132, 0.2)',
+							'rgba(255, 159, 64, 0.2)',
+							'rgba(255, 205, 86, 0.2)',
+							'rgba(75, 192, 192, 0.2)',
+							'rgba(54, 162, 235, 0.2)',
+							'rgba(153, 102, 255, 0.2)',
+							'rgba(201, 203, 207, 0.2)',
+						],
+						borderColor: [
+							'rgb(255, 99, 132)',
+							'rgb(255, 159, 64)',
+							'rgb(255, 205, 86)',
+							'rgb(75, 192, 192)',
+							'rgb(54, 162, 235)',
+							'rgb(153, 102, 255)',
+							'rgb(201, 203, 207)',
+						],
+						borderWidth: 1,
+					},
+				],
+			};
+
+			new Chart(ctx, {
+				type: 'bar',
+				data: data,
+				options: {
+					scales: {
+						y: {
+							beginAtZero: true,
+						},
+					},
+				},
+			});
+
 		}
 	</script>
 </body>
