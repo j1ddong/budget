@@ -18,12 +18,27 @@ body {
     display: block;
     border-radius: 8px;
     border: 1px solid;
-    border-color: #0cdebf;
+    border-color: rgba(238, 81, 115, 0.5);
     padding: 8px;
     margin-top: 250px; 
     margin-left: auto;
     margin-right: auto;
-    background: #224662;
+    background: rgba(255, 99, 132, 0.5);
+}
+.btn-danger{
+    background-color: #8064A2 !important;
+    border-color: #000000;
+}
+
+.btn-info{
+    background-color: #8064A2 !important;
+}
+
+.btn-warning{
+    background-color: #8064A2 !important;
+}
+.btn-success{
+    background-color: #8064A2 !important;
 }
 
 /* display color */
