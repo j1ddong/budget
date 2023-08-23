@@ -11,18 +11,22 @@
         <script>
             function myfunction(){
                 var result=0;
-                var amount1 = Number(document.getElementById("amount1").value);
-                var amount2 = Number(document.getElementById("amount2").value);
-                var amount3 = Number(document.getElementById("amount3").value);
-                var result1 = Number(amount1+amount2+amount3);
-                console.log(result1);
-
                 var Income1 = Number(document.getElementById("Income1").value);
                 var Income2 = Number(document.getElementById("Income2").value);
                 var Income3 = Number(document.getElementById("Income3").value);
-                var result2 = Number(Income1+Income2+Income3);
+                var result1 = Number(Income1+Income2+Income3);
+                console.log(result1);
+
+                var Expense1 = Number(document.getElementById("Expense1").value);
+                var Expense2 = Number(document.getElementById("Expense2").value);
+                var Expense3 = Number(document.getElementById("Expense3").value);
+                var Expense4 = Number(document.getElementById("Expense4").value);
+                var Expense5 = Number(document.getElementById("Expense5").value);
+                var Expense6 = Number(document.getElementById("Expense6").value);
+                var Expense7 = Number(document.getElementById("Expense7").value);
+                var result2 = Number(Expense1+Expense2+Expense3+Expense4+Expense5+Expense6+Expense7);
                 console.log(result2);
-                result = Number(result2-result1);
+                result = Number(result1-result2);
                 console.log(result);
             }
         </script>
@@ -32,74 +36,93 @@
     <body>
         <div>
             <div class="col-sm-12 col-md-12 text-center">
-                <h1>Form</h1>
+
             </div>
             <div class="col-sm-12 col-md-12 text-center">
                 <form class="form-inline">
-
+                    <h2>Income</h2>
                     <div class="form-group">
-                    <label for="Expense1">Expense</label>
-                    <input type="text" class="form-control" id="Expense1" placeholder="Food">
+                    <label for="Income1">Salary</label>
                     </div>
                     <div class="form-group">
-                    <label for="am1">Amount</label>
-                    <input type="number" class="form-control" id="amount1" placeholder="$00.00">
-                    </div>
-                    <br>
-
-                    <div class="form-group">
-                    <label for="Expense2">Expense</label>
-                    <input type="text" class="form-control" id="Expense2" placeholder="Food">
-                    </div>
-                    <div class="form-group">
-                    <label for="am2">Amount</label>
-                    <input type="number" class="form-control" id="amount2" placeholder="$00.00">
-                    </div>
-                    <br>
-
-                    <div class="form-group">
-                    <label for="Expense3">Expense</label>
-                    <input type="text" class="form-control" id="Expense3" placeholder="Food">
-                    </div>
-                    <div class="form-group">
-                    <label for="am3">Amount</label>
-                    <input type="number" class="form-control" id="amount3" placeholder="$00.00">
-                    </div>
-
-                    <br>
-                    <br>
-                    <br>
-
-
-                    <div class="form-group">
-                    <label for="inc1">Expense</label>
-                    <input type="text" class="form-control" id="inc1" placeholder="Food">
-                    </div>
-                    <div class="form-group">
-                    <label for="Income1">Amount</label>
                     <input type="number" class="form-control" id="Income1" placeholder="$00.00">
                     </div>
                     <br>
 
                     <div class="form-group">
-                    <label for="inc2">Expense</label>
-                    <input type="text" class="form-control" id="inc2" placeholder="Food">
+                    <label for="Income2">Investment</label>
                     </div>
                     <div class="form-group">
-                    <label for="Income2">Amount</label>
                     <input type="number" class="form-control" id="Income2" placeholder="$00.00">
                     </div>
                     <br>
 
                     <div class="form-group">
-                    <label for="inc3">Expense</label>
-                    <input type="text" class="form-control" id="inc3" placeholder="Food">
+                    <label for="Income3">Savings</label>
                     </div>
                     <div class="form-group">
-                    <label for="Income3">Amount</label>
                     <input type="number" class="form-control" id="Income3" placeholder="$00.00">
                     </div>
+                    <br>
+
+                    <br>
+                    <br>
+
+                    <h2>Expenses</h2>
+                    <div class="form-group">
+                    <label for="Expense1">Rent</label>
+                    </div>
+                    <div class="form-group">
+                    <input type="number" class="form-control" id="Expense1" placeholder="$00.00">
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                    <label for="Expense2">Utilities</label>
+                    </div>
+                    <div class="form-group">
+                    <input type="number" class="form-control" id="Expense2" placeholder="$00.00">
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                    <label for="Expense3">Commute</label>
+                    </div>
+                    <div class="form-group">
+                    <input type="number" class="form-control" id="Expense3" placeholder="$00.00">
+                    </div>
+                    <br>
     
+                    <div class="form-group">
+                    <label for="Expense4">Food</label>
+                    </div>
+                    <div class="form-group">
+                    <input type="number" class="form-control" id="Expense4" placeholder="$00.00">
+                    </div>
+                    <br>
+    
+                    <div class="form-group">
+                    <label for="Expense5">Entertaiment</label>
+                    </div>
+                    <div class="form-group">
+                    <input type="number" class="form-control" id="Expense5" placeholder="$00.00">
+                    </div>
+                    <br>
+    
+                    <div class="form-group">
+                    <label for="Expense6">Health</label>
+                    </div>
+                    <div class="form-group">
+                    <input type="number" class="form-control" id="Expense6" placeholder="$00.00">
+                    </div>
+                    <br>
+    
+                    <div class="form-group">
+                    <label for="Expense7">Clothing</label>
+                    </div>
+                    <div class="form-group">
+                    <input type="number" class="form-control" id="Expense7" placeholder="$00.00">
+                    </div>
 
                     <button class="btn btn-success" onclick="myfunction()">Compute</button>
                 </form>
