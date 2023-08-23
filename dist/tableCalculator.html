@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="./css/main.css">
+        <title>Document</title>
+
+        <script>
+            function myfunction(){
+                var result=0;
+                var amount1 = Number(document.getElementById("amount1").value);
+                var amount2 = Number(document.getElementById("amount2").value);
+                var amount3 = Number(document.getElementById("amount3").value);
+                var result1 = Number(amount1+amount2+amount3);
+                console.log(result1);
+
+                var Income1 = Number(document.getElementById("Income1").value);
+                var Income2 = Number(document.getElementById("Income2").value);
+                var Income3 = Number(document.getElementById("Income3").value);
+                var result2 = Number(Income1+Income2+Income3);
+                console.log(result2);
+                result = Number(result2-result1);
+                console.log(result);
+            }
+        </script>
+    </head>
+
+
+    <body>
+        <div>
+            <div class="col-sm-12 col-md-12 text-center">
+                <h1>Form</h1>
+            </div>
+            <div class="col-sm-12 col-md-12 text-center">
+                <form class="form-inline">
+
+                    <div class="form-group">
+                    <label for="Expense1">Expense</label>
+                    <input type="text" class="form-control" id="Expense1" placeholder="Food">
+                    </div>
+                    <div class="form-group">
+                    <label for="am1">Amount</label>
+                    <input type="number" class="form-control" id="amount1" placeholder="$00.00">
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                    <label for="Expense2">Expense</label>
+                    <input type="text" class="form-control" id="Expense2" placeholder="Food">
+                    </div>
+                    <div class="form-group">
+                    <label for="am2">Amount</label>
+                    <input type="number" class="form-control" id="amount2" placeholder="$00.00">
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                    <label for="Expense3">Expense</label>
+                    <input type="text" class="form-control" id="Expense3" placeholder="Food">
+                    </div>
+                    <div class="form-group">
+                    <label for="am3">Amount</label>
+                    <input type="number" class="form-control" id="amount3" placeholder="$00.00">
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+
+
+                    <div class="form-group">
+                    <label for="inc1">Expense</label>
+                    <input type="text" class="form-control" id="inc1" placeholder="Food">
+                    </div>
+                    <div class="form-group">
+                    <label for="Income1">Amount</label>
+                    <input type="number" class="form-control" id="Income1" placeholder="$00.00">
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                    <label for="inc2">Expense</label>
+                    <input type="text" class="form-control" id="inc2" placeholder="Food">
+                    </div>
+                    <div class="form-group">
+                    <label for="Income2">Amount</label>
+                    <input type="number" class="form-control" id="Income2" placeholder="$00.00">
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                    <label for="inc3">Expense</label>
+                    <input type="text" class="form-control" id="inc3" placeholder="Food">
+                    </div>
+                    <div class="form-group">
+                    <label for="Income3">Amount</label>
+                    <input type="number" class="form-control" id="Income3" placeholder="$00.00">
+                    </div>
+    
+
+                    <button class="btn btn-success" onclick="myfunction()">Compute</button>
+                </form>
+            </div>
+        </div> 
+    </body>
+</html>
