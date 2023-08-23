@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Budget</title>
 	<!-- css -->
-	<!-- <link rel="stylesheet" href="./css/main.css" /> -->
 	<!-- chart js -->
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -24,7 +23,16 @@
 				data: {
 					labels: ["Rent", "Utilities", "Transport", "Food", "Health", "Clothing"],
 					datasets: [{
-						data: [60, 20, 15, 5, 5, 5]
+						data: [60, 20, 15, 5, 5, 5],
+						backgroundColor: [
+							'rgb(255, 99, 132, .5)',
+							'rgb(255, 159, 64, .5)',
+							'rgb(255, 205, 86, .5)',
+							'rgb(75, 192, 192, .5)',
+							'rgb(54, 162, 235, .5)',
+							'rgb(153, 102, 255, .5)',
+							'rgb(201, 203, 207, .5)',
+						],
 					}]
 				},
 				options: {
