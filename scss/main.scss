@@ -1,40 +1,67 @@
-@import "./navbar";
+@import './navbar';
 @import './calculator';
 
-
-
 .container {
-    max-width: 100%;
-    width: 100%;
-    margin: 0 auto;
+	max-width: 100%;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .wrapper {
-    max-width: 1360px;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 16px;
-    padding-left: 16px;
+	max-width: 1360px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 16px;
+	padding-left: 16px;
 }
 
 .graph {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 95%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 95%;
 
-    &Circle {
-        width: 50%;
-        margin: 0 auto;
-        text-align: center;
-    }
+	&Circle {
+		width: 50%;
+		margin: 0 auto;
+		text-align: center;
+	}
 
-    &Canvas {
-        margin: 0 auto;
-    }
+	&Canvas {
+		margin: 0 auto;
+	}
 
-    &Bar {
-        width: 50%;
-    }
+	&Bar {
+		width: 50%;
+	}
+}
+
+.budgetContainer {
+	margin: 50px 0;
+	text-align: center;
+}
+.boxContainer {
+	display: inline-block;
+	margin: 0 20px;
+}
+.box {
+	display: inline-block;
+	border: 2px solid;
+	border-radius: 15%;
+	padding: 35px;
+}
+.budgetText {
+	font-weight: 800;
+}
+.income {
+	box-shadow: 5px 5px 3px rgb(54, 162, 235, 0.5);
+	border-color: rgb(54, 162, 235, 0.5);
+}
+.expenses {
+	box-shadow: 5px 5px 3px rgb(255, 99, 132, 0.5);
+	border-color: rgb(255, 99, 132, 0.5);
+}
+.total {
+	box-shadow: 5px 5px 3px rgb(0, 0, 0, 0.8);
 }

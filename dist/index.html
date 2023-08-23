@@ -1,119 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Budget</title>
+		<!-- css -->
+		<link rel="stylesheet" href="./css/main.css" />
+		<!-- chart js -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Budget</title>
-	<!-- css -->
-	<link rel="stylesheet" href="./css/main.css">
-	<!-- chart js -->
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-
-<body>
-	<div class="container">
-		<header>
-			<h1 id="website-name">Budget</h1>
-			<nav>
-				<span id="main-page"><a href="index.html">Main Page</a></span>
-				<span id="history"><a href="">History</a></span>
-				<span id="calculator"><a href="calculator.html">Calculator</a></span>
-			</nav>
-		</header>
-		<main>
-			<div class="graph wrapper">
-				<div class="graphCircle">
-					<canvas id="expenses_circle" class="graphCanvas"></canvas>
+	<body>
+		<div class="container">
+			<header>
+				<h1 id="website-name">Budget</h1>
+				<nav>
+					<span id="main-page"><a href="index.html">Main Page</a></span>
+					<span id="history"><a href="">History</a></span>
+					<span id="calculator"><a href="calculator.html">Calculator</a></span>
+				</nav>
+			</header>
+			<main>
+				<div class="budgetContainer">
+					<div class="boxContainer">
+						<p class="budgetText">INCOME</p>
+						<div class="box income">110</div>
+					</div>
+					<div class="boxContainer">
+						<p class="budgetText">EXPENSES</p>
+						<div class="box expenses">110</div>
+					</div>
+					<div class="boxContainer">
+						<p class="budgetText">TOTAL</p>
+						<div class="box total">110</div>
+					</div>
 				</div>
-				<div class="graphBar">
-					<canvas id="expenses_bar"></canvas>
+				<div class="graph wrapper">
+					<div class="graphCircle">
+						<canvas id="expenses_circle" class="graphCanvas"></canvas>
+					</div>
+					<div class="graphBar">
+						<canvas id="expenses_bar"></canvas>
+					</div>
 				</div>
-			</div>
-		</main>
-	</div>
+			</main>
+		</div>
 
-	<script>
-		window.onload = function () {
-			// drawing a doughnut chart graph
-			const circle = document.querySelector("#expenses_circle").getContext('2d')
+		<script>
+			window.onload = function () {
+				// drawing a doughnut chart graph
+				const circle = document
+					.querySelector('#expenses_circle')
+					.getContext('2d');
 
-			new Chart(circle, {
-				type: 'doughnut',
-				data: {
-					labels: ["Rent", "Utilities", "Transport", "Food", "Health", "Clothing"],
-					datasets: [{
-						data: [60, 20, 15, 5, 5, 5],
-						backgroundColor: [
-							'rgb(255, 99, 132, .5)',
-							'rgb(255, 159, 64, .5)',
-							'rgb(255, 205, 86, .5)',
-							'rgb(75, 192, 192, .5)',
-							'rgb(54, 162, 235, .5)',
-							'rgb(153, 102, 255, .5)',
-							'rgb(201, 203, 207, .5)',
+				new Chart(circle, {
+					type: 'doughnut',
+					data: {
+						labels: [
+							'Rent',
+							'Utilities',
+							'Transport',
+							'Food',
+							'Health',
+							'Clothing',
 						],
-					}]
-				},
-				options: {
-					responsive: false,
-				}
-			});
-
-			// drawing a bar chart graph
-			const ctx = document.getElementById('expenses_bar');
-
-			const data = {
-				labels: [
-					'Rent',
-					'Utilties',
-					'Transport',
-					'Food',
-					'Entertainment',
-					'Health',
-					'Clothing',
-				],
-				datasets: [
-					{
-						label: 'My Expenses',
-						data: [65, 59, 80, 81, 56, 55, 40],
-						backgroundColor: [
-							'rgba(255, 99, 132, 0.2)',
-							'rgba(255, 159, 64, 0.2)',
-							'rgba(255, 205, 86, 0.2)',
-							'rgba(75, 192, 192, 0.2)',
-							'rgba(54, 162, 235, 0.2)',
-							'rgba(153, 102, 255, 0.2)',
-							'rgba(201, 203, 207, 0.2)',
+						datasets: [
+							{
+								data: [60, 20, 15, 5, 5, 5],
+								backgroundColor: [
+									'rgb(255, 99, 132, .5)',
+									'rgb(255, 159, 64, .5)',
+									'rgb(255, 205, 86, .5)',
+									'rgb(75, 192, 192, .5)',
+									'rgb(54, 162, 235, .5)',
+									'rgb(153, 102, 255, .5)',
+									'rgb(201, 203, 207, .5)',
+								],
+							},
 						],
-						borderColor: [
-							'rgb(255, 99, 132)',
-							'rgb(255, 159, 64)',
-							'rgb(255, 205, 86)',
-							'rgb(75, 192, 192)',
-							'rgb(54, 162, 235)',
-							'rgb(153, 102, 255)',
-							'rgb(201, 203, 207)',
-						],
-						borderWidth: 1,
 					},
-				],
-			};
+					options: {
+						responsive: false,
+					},
+				});
 
-			new Chart(ctx, {
-				type: 'bar',
-				data: data,
-				options: {
-					scales: {
-						y: {
-							beginAtZero: true,
+				// drawing a bar chart graph
+				const ctx = document.getElementById('expenses_bar');
+
+				const data = {
+					labels: ['Salary', 'Investment', 'Savings'],
+					datasets: [
+						{
+							label: 'My Incomes',
+							data: [65, 59, 80, 81, 56, 55, 40],
+							backgroundColor: [
+								'rgba(255, 99, 132, 0.2)',
+								'rgba(255, 159, 64, 0.2)',
+								'rgba(255, 205, 86, 0.2)',
+								'rgba(75, 192, 192, 0.2)',
+								'rgba(54, 162, 235, 0.2)',
+								'rgba(153, 102, 255, 0.2)',
+								'rgba(201, 203, 207, 0.2)',
+							],
+							borderColor: [
+								'rgb(255, 99, 132)',
+								'rgb(255, 159, 64)',
+								'rgb(255, 205, 86)',
+								'rgb(75, 192, 192)',
+								'rgb(54, 162, 235)',
+								'rgb(153, 102, 255)',
+								'rgb(201, 203, 207)',
+							],
+							borderWidth: 1,
+							barThickness: 90,
+						},
+					],
+				};
+
+				new Chart(ctx, {
+					type: 'bar',
+					data: data,
+					options: {
+						scales: {
+							y: {
+								beginAtZero: true,
+							},
 						},
 					},
-				},
-			});
-
-		}
-	</script>
-</body>
-
+				});
+			};
+		</script>
+	</body>
 </html>
