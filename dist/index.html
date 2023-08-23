@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Budget</title>
+	<!-- css -->
+	<!-- chart js -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+	<canvas id="expenses_circle" width="500" height="500"></canvas>
+
+	<script>
+		window.onload = function () {
+			// drawing a doughnut chart graph
+			let circle = document.querySelector("#expenses_circle").getContext('2d')
+
+			new Chart(circle, {
+				type: 'doughnut',
+				data: {
+					labels: ["Rent", "Utilities", "Transport", "Food", "Health", "Clothing"],
+					datasets: [{
+						data: [60, 20, 15, 5, 5, 5],
+						backgroundColor: [
+							'rgb(255, 99, 132, .5)',
+							'rgb(255, 159, 64, .5)',
+							'rgb(255, 205, 86, .5)',
+							'rgb(75, 192, 192, .5)',
+							'rgb(54, 162, 235, .5)',
+							'rgb(153, 102, 255, .5)',
+							'rgb(201, 203, 207, .5)',
+						],
+					}]
+				},
+				options: {
+					responsive: false,
+				}
+			});
+		}
+	</script>
+</body>
+
+</html>
