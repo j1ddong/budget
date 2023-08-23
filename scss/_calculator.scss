@@ -18,17 +18,36 @@ body {
     display: block;
     border-radius: 8px;
     border: 1px solid;
-    border-color: #0cdebf;
+    border-color: rgb(252, 174, 193);
     padding: 8px;
     margin-top: 250px; 
     margin-left: auto;
     margin-right: auto;
-    background: #224662;
+    background: rgb(252,174,193);
 }
+.btn-danger{
+    background-color: rgb(201, 175, 255) !important;
+    border-color: rgb(201,175,255) !important;
+}
+
+.btn-info{
+    background-color: rgb(151, 205, 245) !important;
+    border-color: rgb(151,205,245) !important;
+}
+
+.btn-warning{
+    background-color: rgb(252,204,159)  !important;
+    border-color: rgb(252,204,159) !important;
+}
+.btn-success{
+    background-color: rgb(162, 220, 223) !important;
+    border-color: rgb(162, 220, 223) !important;
+}
+
 
 /* display color */
 #display {
-    background: #bcbcbc;
+    background: #e9e9e9;
     padding: 8px;
     margin: 16px 12px 10px 16px;
     text-align: center;
