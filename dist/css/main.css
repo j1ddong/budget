@@ -74,4 +74,36 @@ button {
   float: right;
   margin-left: 4px;
   height: 74px;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+header {
+  background-color: rgba(255, 99, 132, 0.5);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+header #website-name {
+  color: white;
+  margin-left: 20px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+header nav span {
+  margin-left: 5px;
+  margin-right: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+#main-page {
+  opacity: 0.6;
 }/*# sourceMappingURL=main.css.map */
