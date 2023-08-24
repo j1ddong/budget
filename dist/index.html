@@ -15,8 +15,8 @@
 			<header>
 				<h1 id="website-name">Budget</h1>
 				<nav>
-					<span id="main-page"><a href="index.html">Main Page</a></span>
-					<span id="history"><a href="">History</a></span>
+					<span><a href="tableCalculator.html">Main Page</a></span>
+					<span id="history"><a href="./index.html">Statistics</a></span>
 					<span id="calculator"><a href="calculator.html">Calculator</a></span>
 				</nav>
 			</header>
@@ -24,15 +24,15 @@
 				<div class="budgetContainer">
 					<div class="boxContainer">
 						<p class="budgetText">INCOME</p>
-						<div class="box income">110</div>
+						<div class="box income">0</div>
 					</div>
 					<div class="boxContainer">
 						<p class="budgetText">EXPENSES</p>
-						<div class="box expenses">110</div>
+						<div class="box expenses">0</div>
 					</div>
 					<div class="boxContainer">
 						<p class="budgetText">TOTAL</p>
-						<div class="box total">110</div>
+						<div class="box total">0</div>
 					</div>
 				</div>
 				<div class="graph wrapper">
@@ -53,6 +53,13 @@
 					.querySelector('#expenses_circle')
 					.getContext('2d');
 
+				let Expense1 = localStorage.getItem('Expense1');
+				let Expense2 = localStorage.getItem('Expense2');
+				let Expense3 = localStorage.getItem('Expense3');
+				let Expense4 = localStorage.getItem('Expense4');
+				let Expense6 = localStorage.getItem('Expense6');
+				let Expense7 = localStorage.getItem('Expense7');
+
 				new Chart(circle, {
 					type: 'doughnut',
 					data: {
@@ -66,7 +73,14 @@
 						],
 						datasets: [
 							{
-								data: [60, 20, 15, 5, 5, 5],
+								data: [
+									Expense1,
+									Expense2,
+									Expense3,
+									Expense4,
+									Expense6,
+									Expense7,
+								],
 								backgroundColor: [
 									'rgb(255, 99, 132, .5)',
 									'rgb(255, 159, 64, .5)',
@@ -86,30 +100,24 @@
 
 				// drawing a bar chart graph
 				const ctx = document.getElementById('expenses_bar');
-
+				let income1 = localStorage.getItem('Income1');
+				let income2 = localStorage.getItem('Income2');
+				let income3 = localStorage.getItem('Income3');
 				const data = {
 					labels: ['Salary', 'Investment', 'Savings'],
 					datasets: [
 						{
 							label: 'My Incomes',
-							data: [65, 59, 80, 81, 56, 55, 40],
+							data: [income1, income2, income3],
 							backgroundColor: [
 								'rgba(255, 99, 132, 0.2)',
 								'rgba(255, 159, 64, 0.2)',
 								'rgba(255, 205, 86, 0.2)',
-								'rgba(75, 192, 192, 0.2)',
-								'rgba(54, 162, 235, 0.2)',
-								'rgba(153, 102, 255, 0.2)',
-								'rgba(201, 203, 207, 0.2)',
 							],
 							borderColor: [
 								'rgb(255, 99, 132)',
 								'rgb(255, 159, 64)',
 								'rgb(255, 205, 86)',
-								'rgb(75, 192, 192)',
-								'rgb(54, 162, 235)',
-								'rgb(153, 102, 255)',
-								'rgb(201, 203, 207)',
 							],
 							borderWidth: 1,
 							barThickness: 90,
@@ -131,4 +139,12 @@
 			};
 		</script>
 	</body>
+	<script>
+		let income = localStorage.getItem('incomeSum');
+		let expense = localStorage.getItem('expenseSum');
+		let total = localStorage.getItem('total');
+		document.getElementsByClassName('income')[0].innerText = income;
+		document.getElementsByClassName('expenses')[0].innerText = expense;
+		document.getElementsByClassName('total')[0].innerText = total;
+	</script>
 </html>

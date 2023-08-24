@@ -35,6 +35,10 @@ header nav span {
   opacity: 0.6;
 }
 
+#history {
+  opacity: 0.6;
+}
+
 /* @import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono'; */
 /* color of the background */
 body {
@@ -131,6 +135,22 @@ button {
   float: right;
   margin-left: 4px;
   height: 74px;
+}
+
+.form-control {
+  width: 50%;
+}
+
+.form-group {
+  padding-top: 25px;
+}
+
+h2 {
+  padding-top: 30px;
+}
+
+form {
+  padding-bottom: 50px;
 }
 
 .container {
